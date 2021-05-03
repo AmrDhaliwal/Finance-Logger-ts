@@ -1,0 +1,19 @@
+{
+  "name": "finance-logger-ts",
+  "version": "1.0.0",
+  "description": "Finance logger built using Typescript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmrDhaliwal/Finance-Logger-ts.git"
+  },
+  "author": "Amrit Dhaliwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmrDhaliwal/Finance-Logger-ts/issues"
+  },
+  "homepage": "https://github.com/AmrDhaliwal/Finance-Logger-ts#readme"
+}
