@@ -1,26 +1,27 @@
 // Registers a list container (ul) to the container
 // Creates a render method to render a new (li) to the container
 
-import { HasFormatter } from "../interfaces/HasFormatter.js";
+
+import { HasFormatter } from "../interfaces/HasFormatter";
 
 export class ListTemplate {
-    constructor(private container: HTMLUListElement){}
+  constructor(private container: HTMLUListElement){}
 
-    render(item: HasFormatter, heading: string, pos: 'start' | 'end') {
-        const li = document.createElement('li');
+  render(item: HasFormatter, heading: string, pos: 'start' | 'end'){
+    const li = document.createElement('li');
+  
+    const h4 = document.createElement('h4');
+    h4.innerText = heading;
+    li.append(h4);
 
-        const h4 = document.createElement('h4');
-        h4.innerText = heading;
-        li.append(h4);
+    const p = document.createElement('p');
+    p.innerText = item.format();
+    li.append(p);
 
-        const p = document.createElement('p');
-        p.innerText = item.format()
-        li.append(p);
-
-        if(pos === 'start') {
-            this.container.prepend(li);
-        } else {
-            this.container.append(li);
-        }
+    if(pos === 'start'){
+      this.container.prepend(li);
+    } else {
+      this.container.append(li);
     }
+  }
 }
